@@ -125,3 +125,22 @@ export async function isAuthenticated(): Promise<boolean> {
 
     return !!user;
 }
+
+export async function getInterviewByUserID(userId?: string): Promise<Interview[]> {
+    if (!userId) {
+        // either return [] or throw, your call:
+        // throw new Error("getInterviewByUserID: userId is required");
+        return [];
+    }
+
+    const snapshot = await db
+        .collection("interviews")
+        .where("userId", "==", userId)
+        .orderBy("createdAt", "desc")
+        .get();
+
+    return snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...(doc.data() as Omit<Interview, "id">),
+    }));
+}
