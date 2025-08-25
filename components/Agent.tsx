@@ -73,8 +73,6 @@ export const Agent = ({ userName, userId, type }: AgentProps) => {
                     userId: userId
                 }
             });
-        } catch (error) {
-            console.error('VAPI start failed:', error);
         }
         catch (err){
             console.error('Error starting call', err);
