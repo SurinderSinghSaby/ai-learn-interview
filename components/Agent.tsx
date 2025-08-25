@@ -66,18 +66,15 @@ export const Agent = ({ userName, userId, type }: AgentProps) => {
         setCallStatus(CallStatus.CONNECTING);
 
         try {
-            await vapi.start(
-                undefined,
-                undefined,
-                undefined,
-                process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!,
-                {
-                    variableValues: {
-                        username: userName,
-                        userId: userId
-                    },
+            await vapi.start({
+                workflowId: process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!,
+                variableValues: {
+                    username: userName,
+                    userId: userId
                 }
-            );
+            });
+        } catch (error) {
+            console.error('VAPI start failed:', error);
         }
         catch (err){
             console.error('Error starting call', err);
