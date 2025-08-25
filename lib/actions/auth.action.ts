@@ -111,7 +111,7 @@ export async function getCurrentUser(): Promise<User | null> {
 
         return {
             ...userRecord.data(),
-            id: decodedClaims.id,
+            id: decodedClaims.uid,
         } as User;
     } catch(e) {
         console.log(e)

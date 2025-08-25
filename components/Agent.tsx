@@ -24,6 +24,7 @@ export const Agent = ({ userName, userId, type }: AgentProps) => {
     const [callStatus, setCallStatus] = useState<CallStatus>(CallStatus.INACTIVE);
     const [messages, setMessages] = useState<SavedMessage[]>([]);
 
+
     useEffect(() => {
         const onCallStart = () => setCallStatus(CallStatus.ACTIVE);
         const onCallEnd = () => setCallStatus(CallStatus.FINISHED);
@@ -66,13 +67,18 @@ export const Agent = ({ userName, userId, type }: AgentProps) => {
         setCallStatus(CallStatus.CONNECTING);
 
         try {
-            await vapi.start({
-                workflowId: process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!,
-                variableValues: {
-                    username: userName,
-                    userId: userId
+            await vapi.start(
+                undefined,
+                undefined,
+                undefined,
+                process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!,
+                {
+                    variableValues: {
+                        username: userName,
+                        userId: userId
+                    },
                 }
-            });
+            );
         }
         catch (err){
             console.error('Error starting call', err);
