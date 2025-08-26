@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  dev:
+    container_name: nextjs-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"   # host:container
+    volumes:
+      - .:/app        # mount local source for hot reload
+      - /app/node_modules # avoid overwriting node_modules
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: development
+
+  prod:
+    container_name: nextjs-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"   # run prod on different host port
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
