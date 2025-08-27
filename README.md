@@ -1,39 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Practice Interview AI 🎤🤖
 
-## Getting Started
+An AI-powered voice interview practice platform that helps you prepare for real interviews with human-like AI voice agents in real-time.
 
-First, run the development server:
+## 🌟 Features
 
+- **Real-time AI Voice Interaction**: Practice with human-like AI voice agents
+- **Fully Customizable Interviews**: Tailor interview scenarios to your specific needs
+- **Voice-Powered Experience**: Natural conversation flow with AI interviewer
+- **Instant Feedback**: Get immediate insights on your interview performance
+- **Multiple Interview Types**: Support for various interview formats and industries
+
+## 🚀 Tech Stack
+
+- **Frontend**: Next.js, Tailwind CSS
+- **Deployment**: Vercel
+- **Containerization**: Docker & Docker Compose
+- **AI Voice Technology**: [Specify your AI voice service]
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+- [Docker](https://www.docker.com/get-started) and Docker Compose
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [Git](https://git-scm.com/)
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/practice-interview-ai.git
+   cd practice-interview-ai
+   ```
+
+2. **Environment Configuration**
+   ```bash
+   cp .env.example .env.local
+   ```
+   Update the `.env.local` file with your API keys and configuration values.
+
+3. **Install dependencies** (if running without Docker)
+   ```bash
+   npm install
+   ```
+
+## 🐳 Docker Development
+
+### Development Mode
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+docker compose up dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production Mode
+```bash
+docker compose up prod
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application will be available at `http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Local Development (Without Docker)
 
-## Learn More
+```bash
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Run development server
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build for production
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start production server
+npm start
+```
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project uses automatic deployment with Vercel:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# ai-learn-interview
-# ai-learn-interview
-# ai-learn-interview
+1. **Push to main branch**: Any commit to the main branch automatically triggers deployment
+2. **Deployment Queue**: Your changes will be added to the deployment queue
+3. **Live Updates**: Changes go live automatically after successful build
+
+### Manual Deployment
+```bash
+# Deploy to Vercel
+vercel --prod
+```
+
+## 📁 Project Structure
+
+```
+practice-interview-ai/
+├── components/          # Reusable UI components
+├── pages/              # Next.js pages
+├── public/             # Static assets
+├── styles/             # Tailwind CSS and custom styles
+├── utils/              # Utility functions
+├── docker-compose.yml  # Docker configuration
+├── Dockerfile          # Docker build instructions
+└── README.md          # Project documentation
+```
+
+## 🎯 Usage
+
+1. **Start an Interview Session**
+   - Choose your interview type (technical, behavioral, etc.)
+   - Select difficulty level and duration
+   - Customize interview focus areas
+
+2. **Practice with AI Voice Agent**
+   - Speak naturally with the AI interviewer
+   - Receive real-time questions and follow-ups
+   - Get instant feedback on your responses
+
+3. **Review Performance**
+   - Access detailed interview analytics
+   - Review recorded sessions (if enabled)
+   - Track improvement over time
+
+
+## 🐛 Known Issues
+
+- Less Unit and E2E tests coverage for the code
+- Configuration setup is still under development
+- Some advanced features may be in beta
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Thanks to all contributors who help improve this project
+- Special thanks to the open-source community for the amazing tools and libraries
+
+## 📊 Project Status
+
+
+
+---
+
+**Ready to ace your next interview?** 🚀 Start practicing with AI today!
+
+*Made with ❤️ by the Practice Interview AI team*
