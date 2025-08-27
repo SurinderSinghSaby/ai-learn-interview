@@ -137,6 +137,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Project Status
 
+<img width="1338" height="704" alt="Screenshot 2025-08-27 at 4 08 53 PM" src="https://github.com/user-attachments/assets/27f533c0-0b26-4955-9054-f004edca2963" />
+
+<img width="877" height="702" alt="Screenshot 2025-08-27 at 4 09 25 PM" src="https://github.com/user-attachments/assets/200d31b6-7699-45cc-8cfc-9cb97c16e995" />
+<img width="1002" height="621" alt="Screenshot 2025-08-27 at 4 09 35 PM" src="https://github.com/user-attachments/assets/47a08d97-356b-4c23-a207-7ef3703bc7ee" />
 
 
 ---
