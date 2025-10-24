@@ -10,6 +10,7 @@ import {getInterviewByUserID, getLatestInterviews} from "@/lib/actions/general.a
 const Page = async () => {
     const user = await getCurrentUser();
 
+
     const [userInterviews, allInterview] = await Promise.all([
         getInterviewByUserID(user?.id!),
         getLatestInterviews({ userId: user?.id! }),
@@ -48,13 +49,7 @@ const Page = async () => {
                     {hasPastInterviews ? (
                         userInterviews?.map((interview) => (
                             <InterviewCard
-                                key={interview.id}
-                                userId={user?.id}
-                                interviewId={interview.id}
-                                role={interview.role}
-                                type={interview.type}
-                                techstack={interview.techstack}
-                                createdAt={interview.createdAt}
+                                {...interview} key={interview.id}
                             />
                         ))
                     ) : (
@@ -70,13 +65,7 @@ const Page = async () => {
                     {hasUpcomingInterviews ? (
                         allInterview?.map((interview) => (
                             <InterviewCard
-                                key={interview.id}
-                                userId={user?.id}
-                                interviewId={interview.id}
-                                role={interview.role}
-                                type={interview.type}
-                                techstack={interview.techstack}
-                                createdAt={interview.createdAt}
+                                {...interview} key={interview.id}
                             />
                         ))
                     ) : (

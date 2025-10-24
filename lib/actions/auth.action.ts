@@ -21,6 +21,7 @@ export async function signIn(params: SignInParams) {
         await setSessionCookie(idToken);
 
     }catch (error) {
+
         console.error(error);
 
         return{

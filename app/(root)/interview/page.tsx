@@ -1,5 +1,5 @@
 
-import {Agent} from "@/components/Agent";
+import Agent from "@/components/Agent";
 import {getCurrentUser} from "@/lib/actions/auth.action";
 
 const Page = async () => {
@@ -12,7 +12,11 @@ const Page = async () => {
             <div>Interview Generation</div>
             <div>Better Future</div>
 
-            <Agent userName={user?.name} userId={user?.id} type="generate"></Agent>
+            <Agent
+                userName={user?.name}
+                userId={user?.id}
+                type="generate"
+            />
         </>
     )
 }
