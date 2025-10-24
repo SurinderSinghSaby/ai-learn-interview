@@ -1,7 +1,3 @@
 {
-  "builds": [
-    {
-
-    }
-  ]
+  "framework": "nextjs"
 }
